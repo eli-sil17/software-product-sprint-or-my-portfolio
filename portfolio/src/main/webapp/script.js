@@ -29,8 +29,15 @@ function addRandomGreeting() {
 
 async function greeting() {
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
+    const textFromResponse = await responseFromServer.json();
   
     const dateContainer = document.getElementById('greet-ely');
-    dateContainer.innerText = textFromResponse;
+    const rand = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+    dateContainer.innerText =rand;
+    
+    
+   
+    console.log(textFromResponse[0].fact);
+    console.log(textFromResponse);
+    //console.log(textFromResponse.z);
   }

@@ -32,18 +32,36 @@
       <button onclick="addRandomGreeting()">The Office quotes</button>
       <div id="greeting-container"></div>
 
-      <form method="POST">
+      <div class="form2">
+      <form action="/form-handler" method="POST">
         <p><strong>Please rate this portfolio</strong> </p>
-        <input type="checkbox" id="option1" name="option1" value="awesome">
+        <input type="radio" id="option1" name="text-input" value="awesome">
         <label for="option1"> It's awesome!!</label><br>
-        <input type="checkbox" id="option2" name="option2" value="alright">
+        <input type="radio" id="option2" name="text-input" value="alright">
         <label for="option2"> It was alright. </label><br>
-        <input type="checkbox" id="option3" name="option3" value="bad">
+        <input type="radio" id="option3" name="text-input" value="bad">
         <label for="option3"> It was bad :(</label><br><br>
-        <textarea name="text-input">Or leave your personal comments in the box</textarea>
+        <p><strong>Or leave your personal comments in the box:</strong> </p>
+        <textarea name="text-input"></textarea>
         <br/>
         <input type="submit" />
       </form>
+    </div>
+      <div class="form2">
+      <form action="/contact-form" method="POST">
+        <p>If you have any questions </p>
+        <p><strong>Fill out the form below</strong> </p>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" value=""><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
     </div>
   </body>
 </html>

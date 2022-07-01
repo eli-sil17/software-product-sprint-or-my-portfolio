@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['Thats what she said', 'beats, bear, battlestar galactica', 'identity theft is not a joke jim', 'Boy, have you done lost your mind? Cause I’ll help you find it!', 'The worst thing about prison was the dementors.'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -26,3 +26,18 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function greeting() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.json();
+  
+    const dateContainer = document.getElementById('greet-ely');
+    const rand = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+    dateContainer.innerText =rand;
+    
+    
+   
+    console.log(textFromResponse[0].fact);
+    console.log(textFromResponse);
+    //console.log(textFromResponse.z);
+  }
